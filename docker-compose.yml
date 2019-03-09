@@ -11,6 +11,7 @@ services:
     runtime: nvidia
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
+    user: "${UID}:${GID}"
     stdin_open: true
     tty: true
     command: bash
