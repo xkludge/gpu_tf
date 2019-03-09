@@ -1,0 +1,16 @@
+version: '2.3'
+
+services:
+  gpu_tf:
+    container_name: gpu_tf
+    image: tensorflow/tensorflow:latest-gpu
+    ports:
+      - 8888:8888
+    volumes:
+      - ./app:/opt/
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    stdin_open: true
+    tty: true
+    command: bash
