@@ -1,4 +1,4 @@
-.PHONY: start stop sh logs
+.PHONY: start stop sh logs runapp
 
 start:
 	docker-compose up -d
@@ -11,3 +11,6 @@ logs:
 
 sh:
 	docker exec -it gpu_tf bash
+
+runapp:
+	docker exec -it gpu_tf python /opt/gpu_tensorflow.py
