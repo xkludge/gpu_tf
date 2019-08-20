@@ -11,3 +11,9 @@ quick test to check that nvidia gpu is available to TF cuda
     * shell into app
 * make stop
 * make logs
+
+
+## Recommended
+
+Monitoring GPU
+nvtop | https://github.com/Syllo/nvtop
